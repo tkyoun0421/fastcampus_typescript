@@ -1,26 +1,53 @@
-interface Foo {
-    bar: number;
-    bas: string;
-}
+// interface Animal {
+//     name: string;
+// }
 
-let foo = {} as Foo;
-foo.bar = 123;
-foo.bas = 'hello';
+// interface Bear extends Animal {
+//     honey: boolean;
+// }
 
-// 타입 단언
-const bodyEl = document.querySelector('body') as HTMLBodyElement;
-bodyEl.innerText = 'Hello';
+// const bear1: Bear = {
+//     name: 'honer bear',
+//     honey: true,
+// };
 
-// ! not null 타입 단언
-const bodyEl1 = document.querySelector('body');
-bodyEl1!.innerText = 'Hello';
+// type Animal = {
+//     name: string;
+// };
 
-// 타입 가드
-function func(arg: string | null) {
-    if (arg) {
-        return (arg as string).toLowerCase();
-    }
-}
+// type Bear = Animal & {
+//     honey: boolean;
+// };
 
-func('hello');
-func(null);
+// const bear1: Bear = {
+//     name: 'honey bear',
+//     honey: true,
+// };
+
+// interface 선언 병합 가능 (declaration Merging)
+// interface Animal {
+//     name: string;
+// }
+
+// interface Animal {
+//     honey: boolean;
+// }
+
+// const bear1: Animal = {
+//     name: 'honer bear',
+//     honey: true,
+// };
+
+// Type에선 선언 병합 X
+// type Animal = {
+//     name: string;
+// };
+
+// type Animal {
+//     honey: boolean;
+// };
+
+// const bear1: Animal = {
+//     name: 'honey bear',
+//     honey: true,
+// };

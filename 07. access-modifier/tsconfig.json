@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src", // 소스 파일 안에서 root 폴더를 명시
+        "outDir": "./build/js", // ts 컴파일 후에 어느 경로로 들어가는지 명시
+        "target": "ES6", // 타입스크립트를 ES6 버전의 자바스크립트로 변환
+        "noEmitOnError": true,
+        "module": "ESNext", // 모듈 시스템을 사용할 지
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "lib": ["ESNext", "DOM"],
+        "strict": true
+    },
+    "include": ["./src/**/*.ts"], // 소스 파일의 어디에서 타입스크립트 파일을 찾을 수 있는지 명시
+    "exclude": ["node_modules"] // 컴파일시 제외할 목록
+}
